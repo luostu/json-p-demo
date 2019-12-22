@@ -22,7 +22,6 @@ var server = http.createServer(function(request, response){
   console.log('存在监听' + pathWithQuery)
 
   if(path === '/'){  // 如果用户请求的是 / 路径
-    var newAmount=amount-1
     var string = fs.readFileSync('index.html','utf8')  // 就读取 index.html 的内容
     var amount=fs.readFileSync('db','utf8')
    string=string.replace('&&&amount&&&',amount)
